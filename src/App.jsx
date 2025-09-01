@@ -4,7 +4,7 @@ import { Navbar } from './Navbar.jsx'
 import { Routes, Route} from "react-router-dom"
 import Header from './Header.jsx'
 import Footer from './Footer.jsx'
-
+import Middlecontent from './Middlecontent.jsx'
 
 
 function App() {
@@ -15,19 +15,23 @@ function App() {
 
        <Routes>
         <Route path="/" element={
-          <>
-          
-            
-            <Navbar/>
+           <div className="page-container">
+          <Navbar />
+          <div className="maincontent">
             <Header />
-            {/* <Middlecontent /> */}
-            <Footer />
-          </>
+            <Middlecontent />
+          </div>
+          <Footer />
+        </div>
         } />
         <Route path="/recipe" element={
-        <>  
-          <Recipe />
-        </>
+         <div className="page-container">
+          <Navbar />
+          <div className="maincontent">
+            <Recipe />
+          </div>
+          <Footer />
+        </div>
           } 
         />
       </Routes>

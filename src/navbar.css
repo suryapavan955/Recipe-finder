@@ -1,4 +1,4 @@
-*{
+/* *{
     margin:0;
     padding:0;
     border:0;
@@ -9,9 +9,10 @@
     display: flex;
     width: 100%;
     flex-direction:row;
-    justify-content: center;
+    justify-content: space-between ;
     align-items: center;
     background-color: beige;
+    padding:0 80px 0 80px;
 }
 
 .logo{
@@ -22,6 +23,84 @@
 
 .list{
     display: flex;
-    gap:12px;
-    margin: 0 300px 0 300px; 
+    gap:50px;
+    /* margin: 0 300px 0 300px;  
+/* } */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar container */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 15px 60px;
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo section */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logo-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #064e3b; /* green accent */
+}
+
+/* Navigation links */
+.list {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #16a34a;
+}
+
+/* Browse Recipes button */
+.nav-btn {
+  background-color: #16a34a;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: #15803d;
 }

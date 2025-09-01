@@ -7,6 +7,23 @@
   box-sizing: border-box;
 }
 
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+.page-container {
+  min-height: 100vh;      /* Full screen height */
+  display: flex;
+  flex-direction: column; /* Stack navbar, content, footer */
+}
+
+.maincontent {
+  flex: 1; /* pushes footer down */
+}
+
+
 .header{
   display: flex;
   flex-direction: column;
