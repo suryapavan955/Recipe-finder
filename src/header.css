@@ -1,6 +1,7 @@
 
 
   .header {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,7 +40,7 @@
   max-width: 600px;
   height: auto;
   border-radius: 20px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* Heading Style */
@@ -109,7 +110,7 @@
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: 0.3s;
 }
 

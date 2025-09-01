@@ -4,6 +4,7 @@
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
+   background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
 }
 
 /* ---------- Intro Section ---------- */
@@ -13,6 +14,11 @@
   margin-bottom: 15px;
   color: #064e3b;
 }
+
+.intro-title span{
+    background: linear-gradient(to top, #fcd5ce 25%, transparent 25%);
+}
+
 
 .intro-text {
   font-size: 1rem;
@@ -107,8 +113,8 @@
 }
 
 .view-btn {
-  padding: 8px 15px;
-  background-color: #3182ce;
+  padding: 5px 15px;
+  background-color:#16a34a;
   color: white;
   border: none;
   border-radius: 6px;
@@ -119,6 +125,29 @@
 
 .view-btn:hover {
   background-color: #2b6cb0;
+}
+
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff6600; /* orange spinner */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 30px auto;
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin-top: 20px;
 }
 
 /* ---------- Responsive ---------- */

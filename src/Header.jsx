@@ -16,7 +16,7 @@ function Headercards() {
 
       <div className="card">
         <div className="cardlogos">
-          <img src={carrrot} alt="carrotlogo" />
+          <img src="https://images.vexels.com/media/users/3/128895/isolated/preview/f9298b663ad1e671680cad2ed70b20c3-timer-reload-flat-icon.png" alt="carrotlogo" />
         </div>
         <h5 className="cardheading">Minimum fuss</h5>
         <p>All recipes are designed to make eating healthy quick and easy.</p>
@@ -24,7 +24,7 @@ function Headercards() {
 
       <div className="card">
         <div className="cardlogos">
-          <img src={carrrot} alt="carrotlogo" />
+          <img src="https://www.freeiconspng.com/uploads/filter-icon-32.png" alt="carrotlogo" />
         </div>
         <h5 className="cardheading">Search in seconds</h5>
         <p>

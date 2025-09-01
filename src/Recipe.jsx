@@ -7,9 +7,18 @@ export function Recipe() {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortOption, setSortOption] = useState("default");
 
+
+   const [loading, setLoading] = useState(false); // ✅ loading state
+    const [error, setError] = useState(null);
+
   // Function to fetch recipes by ingredient
   const fetchRecipes = async (ingredient = "chicken") => {
     try {
+
+       setLoading(true);  // ✅ show loader
+      setError(null);
+
+
       const res = await fetch(
         `https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`
       );
@@ -27,6 +36,10 @@ export function Recipe() {
       }
     } catch (err) {
       console.error("Error fetching recipes:", err);
+       setError("Failed to load recipes.");
+    }
+     finally {
+      setLoading(false); // ✅ hide loader
     }
   };
 
@@ -66,7 +79,7 @@ export function Recipe() {
     <div className="recipe-page">
       {/* Intro Section */}
       <section className="intro">
-        <h1 className="intro-title">Explore our simple, healthy recipes</h1>
+        <h1 className="intro-title"><span>Explore</span> our simple, healthy recipes</h1>
         <p className="intro-text">
           Discover quick, whole-food dishes that fit real-life schedules and
           taste amazing.<hr></hr> Use the search bar to find a recipe by ingredient, or
@@ -103,7 +116,9 @@ export function Recipe() {
 
       {/* Recipes Grid */}
       <section className="recipes-grid">
-        {sortedRecipes.length > 0 ? (
+        {loading && <div className="loader"></div>} {/* ✅ Spinner */}
+        {error && <p className="error">{error}</p>}
+        { !loading && !error && sortedRecipes.length > 0 ? (
           sortedRecipes.map((recipe) => (
             <div key={recipe.idMeal} className="recipe-card">
               <img
@@ -117,7 +132,8 @@ export function Recipe() {
             </div>
           ))
         ) : (
-          <p>No recipes found. Try another ingredient.</p>
+          // <p>No recipes found. Try another ingredient.</p>
+           !loading && !error && <p>No recipes found. Try another ingredient.</p>
         )}
       </section>
     </div>
